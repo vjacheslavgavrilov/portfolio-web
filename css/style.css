@@ -2,3 +2,12 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+section, footer {
+  padding: 125px 0;
+}
+
+.content-container {
+  margin: 0px auto;
+  max-width: 1140px;
+}
