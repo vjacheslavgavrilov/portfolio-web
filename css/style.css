@@ -3,3 +3,116 @@
   margin: 0px auto;
   max-width: 1140px;
 }
+
+/* General properties for the section */
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* General properties of bento and it's content */
+.bento-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bento-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.bento-div {
+  border: 1px solid rgb(31, 31, 31);
+  border-radius: 16px;
+  background-color: rgb(16, 16, 16);
+  background-image: url(/images/common/random-static-div.png);
+}
+
+.bento-div.primary {
+  min-height: 280px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bento-div.secondary {
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bento-info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Superellipse icon button */
+.superellipse-icon-button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.superellipse-icon-button {
+  background-color: rgba(38, 38, 38, 0.7);
+  border-radius: 16px;
+  padding: 10px;
+}
+
+/* Primary button */
+.primary-button {
+  background-color: rgba(38, 38, 38, 0.7);
+  padding: 17px 40px;
+  line-height: 1;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+/* Tags and labels */
+.label-gray {
+  display: inline-flex;
+  background-color: rgba(38, 38, 38, 0.7);
+  border-radius: 8px;
+  font-weight: 700;
+  padding: 8px 12px;
+  margin-right: auto;
+  user-select: none;
+}
+
+.tag-gray {
+  font-family: "Roboto Mono", monospace;
+  color: rgb(196, 196, 196);
+}
+
+/* Sticker fix */
+.my-face {
+  display: block;
+  margin: 60px auto;
+}
+
+/* Icon view styles */
+.icon-view-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+
+.icon-view {
+  display: inline-flex;
+  background-color: rgba(38, 38, 38, 0.7);
+  padding: 12px;
+  border-radius: 100%;
+}
+
+.icon-view-text {
+  color: rgb(196, 196, 196);
+  line-height: 1.2;
+}
