@@ -5,7 +5,7 @@
 }
 
 /* General properties for the section */
-.about-me-section {
+.about-me-section, .my-work-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -25,7 +25,7 @@
 }
 
 .bento-div {
-  border: 1px solid rgb(31, 31, 31);
+  outline: 1px solid rgb(31, 31, 31);
   border-radius: 16px;
   background-color: rgb(16, 16, 16);
   background-image: url(/images/common/random-static-div.png);
@@ -47,17 +47,31 @@
   justify-content: space-between;
 }
 
+.bento-div.case {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
 .bento-info{
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+.bento-case-info {
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* Superellipse icon button */
 .superellipse-icon-button-group {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 15px;
 }
 
 .superellipse-icon-button {

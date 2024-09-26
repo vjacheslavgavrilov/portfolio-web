@@ -364,3 +364,12 @@ section, footer {
 h2 {
   font-size: 40px;
 }
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 18px;
+  color: rgb(196, 196, 196);
+}
