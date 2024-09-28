@@ -361,6 +361,10 @@ section, footer {
   padding: 125px 0;
 }
 
+h1 {
+  font-size: 50px;
+}
+
 h2 {
   font-size: 40px;
 }
@@ -372,4 +376,5 @@ h3 {
 p {
   font-size: 18px;
   color: rgb(196, 196, 196);
+  line-height: 1.2;
 }

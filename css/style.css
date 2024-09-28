@@ -5,10 +5,14 @@
 }
 
 /* General properties for the section */
-.about-me-section, .my-work-section {
+.about-me-section, .my-work-section, .about-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.about-section {
+  gap: 50px;
 }
 
 /* General properties of bento and it's content */
@@ -16,6 +20,10 @@
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
+}
+
+.bento-grid.content {
+  gap: 100px;
 }
 
 .bento-container {
@@ -87,6 +95,10 @@
   line-height: 1;
   border-radius: 50px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 /* Tags and labels */
@@ -96,13 +108,19 @@
   border-radius: 8px;
   font-weight: 700;
   padding: 8px 12px;
-  margin-right: auto;
   user-select: none;
 }
 
 .tag-gray {
+  line-height: 1.5;
   font-family: "Roboto Mono", monospace;
   color: rgb(196, 196, 196);
+}
+
+.tag-oragne {
+  line-height: 1.5;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(246, 97, 65);
 }
 
 /* Sticker fix */
@@ -129,4 +147,33 @@
 .icon-view-text {
   color: rgb(196, 196, 196);
   line-height: 1.2;
+}
+
+.paint-orange {
+  color: rgb(246, 97, 65);
+}
+
+/* Properties for text blocks */
+.text-line-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.default-text {
+  color: rgb(196, 196, 196);
+  line-height: 1.2;
+}
+
+/* General properties of key result and it's content */
+.key-results-div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.key-results {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
