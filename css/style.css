@@ -5,13 +5,13 @@
 }
 
 /* General properties for the section */
-.about-me-section, .my-work-section, .about-section {
+.about-me-section, .my-work-section, .about-section, .work-descripton-section, .work-screenshot-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.about-section {
+.about-section, .work-descripton-section {
   gap: 50px;
 }
 
@@ -24,6 +24,14 @@
 
 .bento-grid.content {
   gap: 100px;
+}
+
+.bento-grid.work {
+  gap: 50px;
+}
+
+.bento-grid.work.work-gap {
+  margin-top: 75px;
 }
 
 .bento-container {
@@ -67,12 +75,16 @@
   gap: 10px;
 }
 
-.bento-case-info {
+.bento-case-info, .bento-key-results {
   padding: 40px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.bento-key-results {
+  gap: 25px;
 }
 
 /* Superellipse icon button */
@@ -160,6 +172,10 @@
   gap: 25px;
 }
 
+.text-line-gap.secondary {
+  gap: 20px;
+}
+
 .default-text {
   color: rgb(196, 196, 196);
   line-height: 1.2;
@@ -170,6 +186,10 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+
+.key-results-div.secondary {
+  gap: 20px;
 }
 
 .key-results {
