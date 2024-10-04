@@ -6,6 +6,7 @@
     </title>
     <link href="/css/general.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
+    <script src="/js//show-all.js"></script>
   </head>
   <body>
     <!-- Container with max-width for all content on the site -->
@@ -146,7 +147,7 @@
         </div>
         <div class="bento-grid">
           <div class="bento-div case">
-            <img src="/images/common/under-construction.png" alt="case-image">
+            <img src="/images/common/regbiz-cover.png" alt="case-image">
             <div class="bento-case-info">
               <div class="bento-info">
                 <h3>
@@ -162,7 +163,7 @@
             </div>
           </div>
           <div class="bento-div case">
-            <img src="/images/common/under-construction.png" alt="case-image">
+            <img src="/images/common/svizm-cover.png" alt="case-image">
             <div class="bento-case-info">
               <div class="bento-info">
                 <h3>
@@ -178,7 +179,7 @@
             </div>
           </div>
           <div class="bento-div case">
-            <img src="/images/common/under-construction.png" alt="case-image">
+            <img src="/images/common/liquidation-cover.png" alt="case-image">
             <div class="bento-case-info">
               <div class="bento-info">
                 <h3>
@@ -194,7 +195,7 @@
             </div>
           </div>
           <div class="bento-div case">
-            <img src="/images/common/under-construction.png" alt="case-image">
+            <img src="/images/common/daily-meal-cover.png" alt="case-image">
             <div class="bento-case-info">
               <div class="bento-info">
                 <h3>
@@ -209,8 +210,88 @@
               </div>
             </div>
           </div>
+          <div class="bento-div case show-all-hidden">
+            <img src="/images/common/my-documents-cover.png" alt="case-image">
+            <div class="bento-case-info">
+              <div class="bento-info">
+                <h3>
+                  МоиДоки
+                </h3>
+                <p>
+                  Тут какое-то небольшое описание, что было сделано, максимум две строки
+                </p>
+              </div>
+              <div class="tag-gray">
+                исследования &#183; ux/ui &#183; 2020
+              </div>
+            </div>
+          </div>
+          <div class="bento-div case show-all-hidden">
+            <img src="/images/common/locate-people-cover.png" alt="case-image">
+            <div class="bento-case-info">
+              <div class="bento-info">
+                <h3>
+                  Locate people
+                </h3>
+                <p>
+                  Тут какое-то небольшое описание, что было сделано, максимум две строки
+                </p>
+              </div>
+              <div class="tag-gray">
+                ux-аудит &#183; микросервис &#183; 2019
+              </div>
+            </div>
+          </div>
+          <div class="bento-div case show-all-hidden">
+            <img src="/images/common/wear-print-cover.png" alt="case-image">
+            <div class="bento-case-info">
+              <div class="bento-info">
+                <h3>
+                  WearPrint
+                </h3>
+                <p>
+                  Тут какое-то небольшое описание, что было сделано, максимум две строки
+                </p>
+              </div>
+              <div class="tag-gray">
+                исследования &#183; ux/ui &#183; 2018
+              </div>
+            </div>
+          </div>
+          <div class="bento-div case show-all-hidden">
+            <img src="/images/common/prian-cover.png" alt="case-image">
+            <div class="bento-case-info">
+              <div class="bento-info">
+                <h3>
+                  Prian
+                </h3>
+                <p>
+                  Тут какое-то небольшое описание, что было сделано, максимум две строки
+                </p>
+              </div>
+              <div class="tag-gray">
+                редизайн &#183; пресейл &#183; 2018
+              </div>
+            </div>
+          </div>
+          <div class="bento-div case show-all-hidden">
+            <img src="/images/common/investimo-cover.png" alt="case-image">
+            <div class="bento-case-info">
+              <div class="bento-info">
+                <h3>
+                  Investimo
+                </h3>
+                <p>
+                  Тут какое-то небольшое описание, что было сделано, максимум две строки
+                </p>
+              </div>
+              <div class="tag-gray">
+                запуск с нуля &#183; ios &#183; 2017
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="bento-div secondary">
+        <div class="bento-div secondary" id="secondaryBentoDiv">
           <div class="icon-view-div">
             <div class="icon-view">
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
@@ -221,7 +302,7 @@
               За этой плашкой скрыто ещё много работ,<br> можешь посмотреть, если скучно
             </div>
           </div>
-          <button class="primary-button">Показать все</button>
+          <button class="primary-button" onclick="showAll()">Показать все</button>
         </div>
       </section>
       <!-- ↓↓ Like a footer ↓↓ -->
