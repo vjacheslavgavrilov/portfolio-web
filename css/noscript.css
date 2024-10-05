@@ -1,0 +1,7 @@
+.bento-div.case.show-all-hidden {
+  display: flex !important;
+}
+
+#secondaryBentoDiv {
+  display: none !important;
+}
