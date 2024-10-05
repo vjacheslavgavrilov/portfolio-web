@@ -45,6 +45,7 @@
   border-radius: 16px;
   background-color: rgb(16, 16, 16);
   background-image: url(/images/common/random-static-div.png);
+  position: relative;
 }
 
 .bento-div.primary {
@@ -53,6 +54,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.25s ease;
+}
+
+.bento-div.primary.clickable:hover, .bento-div.case.clickable:hover {
+  transform: translateY(0px) scale(1.03);
+}
+
+.bento-div.primary.clickable:active, .bento-div.case.clickable:active {
+  transform: translateY(0px) scale(0.97);
 }
 
 .bento-div.secondary, .bento-div.mobile-bg {
@@ -75,6 +85,7 @@
   min-height: 450px;
   display: flex;
   flex-direction: column;
+  transition: all 0.25s ease;
 }
 
 .bento-info{
@@ -107,6 +118,7 @@
   background-color: rgba(38, 38, 38, 0.7);
   border-radius: 16px;
   padding: 10px;
+  transition: all 0.25s ease;
 }
 
 /* Primary button */
@@ -120,6 +132,16 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.primary-button:hover, .superellipse-icon-button:hover {
+  background-color: rgba(38, 38, 38, 1);
+}
+
+.primary-button:active, .superellipse-icon-button:active {
+  transform: translateY(0px) scale(0.97);
+  background-color: rgba(38, 38, 38, 0.7);
 }
 
 /* Tags and labels */
@@ -156,6 +178,20 @@
   flex-direction: row;
   align-items: center;
   gap: 25px;
+}
+
+.icon-view-div.external-link {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  opacity: 0;
+  transform: scale(0.2) translateZ(0px);
+  transition: all 0.25s ease;
+}
+
+.bento-div.primary.clickable:hover .icon-view-div.external-link, .bento-div.case.clickable:hover .icon-view-div.external-link {
+  opacity: 1;
+  transform: none;
 }
 
 .icon-view {
