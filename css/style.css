@@ -55,12 +55,16 @@
   justify-content: space-between;
 }
 
-.bento-div.secondary {
+.bento-div.secondary, .bento-div.mobile-bg {
   padding: 25px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.bento-div.mobile-bg {
+  padding: 50px;
 }
 
 .bento-div.case.show-all-hidden {
