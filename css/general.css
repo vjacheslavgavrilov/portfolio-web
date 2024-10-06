@@ -385,3 +385,18 @@ a {
   display: contents; 
   cursor: pointer; 
 }
+
+/* ↓↓ Easy smooth appearance of content ↓↓ */
+
+body {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

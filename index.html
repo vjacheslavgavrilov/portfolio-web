@@ -12,6 +12,7 @@
     <link href="/css/general.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <script src="/js/show-all.js"></script>
+    <script src="/js/copy-text.js"></script>
   </head>
   <body>
     <!-- Container with max-width for all content on the site -->
@@ -188,9 +189,13 @@
               Если хочешь написать мне на почту,<br> кликай на кнопку справа
             </div>
           </div>
-          <button class="primary-button">
-            vjacheslavgavrilov@gmail.com
-          </button>
+          <div class="button-div">
+            <button value="vjacheslavgavrilov@gmail.com" onclick="copyText()" class="primary-button">
+              vjacheslavgavrilov@gmail.com
+            </button>
+            <div class="toast">
+            </div>
+          </div>
         </div>
       </section>
       <!-- ↓↓ My work section ↓↓ -->
