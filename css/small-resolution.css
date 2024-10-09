@@ -1,0 +1,6 @@
+/* There are no Easter Eggs up here. Go away. */
+@media only screen and (max-width: 374px) {
+  body {
+    display: none;
+  }
+}

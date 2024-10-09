@@ -1,6 +1,7 @@
 /* Container with max-width for all content on the site  */
 .content-container {
   margin: 0px auto;
+  width: calc(100% - 80px);
   max-width: 1140px;
 }
 
@@ -206,6 +207,7 @@
 }
 
 .icon-view-text {
+  max-width: 320px;
   color: rgb(196, 196, 196);
   line-height: 1.2;
 }
@@ -247,6 +249,7 @@
   gap: 10px;
 }
 
+/* Toast properties and animation */
 .toast {
   display: none;
   position: absolute;
@@ -270,4 +273,13 @@
 @keyframes fadeout {
   from { opacity: 1; }
   to   { opacity: 0; }
+}
+
+/* Case images properties */
+.case-image {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  image-rendering: auto;
+  border-radius: inherit;
 }

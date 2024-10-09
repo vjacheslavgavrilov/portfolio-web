@@ -1,0 +1,90 @@
+/* Mobile adaptive */
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  section, footer {
+    padding: 50px 0;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .content-container {
+    width: calc(100% - 40px);
+  }
+
+  .about-section, .work-descripton-section {
+    gap: 30px;
+  }
+
+  .bento-grid {
+    grid-template-columns: inherit;
+  }
+
+  .bento-div.primary, .bento-case-info, .bento-key-results {
+    padding: 25px;
+  }
+
+  .bento-div.secondary, .icon-view-div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .bento-div.secondary {
+    gap: 40px;
+  }
+
+  .bento-grid.content {
+    gap: 50px;
+  }
+
+  .bento-grid.work.work-gap {
+    margin-top: 50px;
+  }
+
+  .bento-div.mobile-bg {
+    padding: 15px;
+  }
+
+  .my-photo {
+    width: 100%;
+  }
+
+  #sorting-order-image {
+    order: 1;
+  }
+
+  #sorting-order-text {
+    order: 2;
+  }
+
+  .icon-view-text {
+    max-width: inherit;
+  }
+
+  .icon-view-div.external-link {
+    right: 25px;
+    top: 25px;
+  }
+
+  .button-div {
+    width: 100%;
+  }
+
+  .primary-button {
+    width: 100%;
+    padding: 17px 0;
+  }
+}
