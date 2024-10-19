@@ -108,11 +108,18 @@
   justify-content: flex-start;
 }
 
-/* Superellipse icon button */
+/* Superellipse */
 .superellipse-icon-button-group {
   display: flex;
   flex-direction: row;
   gap: 15px;
+}
+
+.superellipse-icon {
+  background-color: rgba(38, 38, 38, 0.7);
+  border-radius: 16px;
+  padding: 10px;
+  line-height: 0;
 }
 
 .superellipse-icon-button {
