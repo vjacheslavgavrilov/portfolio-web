@@ -290,3 +290,19 @@
   image-rendering: auto;
   border-radius: inherit;
 }
+
+.copy-text {
+  display: none;
+  cursor: pointer;
+  outline: 1px solid rgba(38, 38, 38, 0.7);
+  border-radius: 8px;
+  padding: 17px 40px;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.icon-view-text-no-js {
+  display: none;
+}

@@ -87,4 +87,8 @@
     width: 100%;
     padding: 17px 0;
   }
+
+  .key-results-div.secondary, .text-line-gap.secondary {
+    gap: 10px;
+  }
 }

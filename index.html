@@ -28,7 +28,7 @@
         <div class="bento-grid">
           <a href="/about.html">
             <div class="bento-div primary clickable">
-              <img class="my-face" src="/images/common/my-face.png" alt="my-face">
+              <img class="my-face" src="/images/common/my-face.png" alt="my-face" draggable="false">
               <div class="bento-info">
                 <h2>
                   Вячеслав Гаврилов
@@ -189,15 +189,17 @@
                 </svg>
             </div>
             <div class="icon-view-text">
-              Если хочешь написать мне на&nbsp;почту, кликай на&nbsp;кнопку
+              <span class="icon-view-text-default">Если хочешь написать мне на&nbsp;почту, кликай на&nbsp;кнопку</span>
+              <span class="icon-view-text-no-js">Ты&nbsp;зачем-то отключил&nbsp;JS, придётся копировать почту руками &macr;\_(ツ)_/&macr;</span>
             </div>
           </div>
           <div class="button-div">
-            <button value="vjacheslavgavrilov@gmail.com" onclick="copyText()" class="primary-button">
+            <button value="vjacheslavgavrilov@gmail.com" onclick="copyText()" class="primary-button" id="copyTextButton">
               vjacheslavgavrilov@gmail.com
             </button>
             <div class="toast">
             </div>
+            <span class="copy-text">vjacheslavgavrilov@gmail.com</span>
           </div>
         </div>
       </section>
@@ -220,7 +222,7 @@
                   </p>
                 </div>
                 <div class="tag-gray">
-                  редизайн &middot; исследования &middot; 2024
+                  редизайн &middot; ux/cx &middot; 2024
                 </div>
                 <div class="icon-view-div external-link">
                   <div class="icon-view">

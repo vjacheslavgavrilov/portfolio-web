@@ -5,3 +5,29 @@
 #secondaryBentoDiv {
   display: none !important;
 }
+
+.copy-text {
+  display: flex !important;
+}
+
+#copyTextButton {
+  display: none !important;
+}
+
+.icon-view-text-default {
+  display: none !important;
+}
+
+.icon-view-text-no-js {
+  display: flex !important;
+}
+
+@media only screen and (max-width: 374px) {
+  .content-container {
+    display: none !important;
+  }
+
+  .small-resolution {
+    display: flex !important;
+  }
+}
