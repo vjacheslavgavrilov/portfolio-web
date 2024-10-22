@@ -49,4 +49,8 @@
     right: 30px;
     top: 30px;
   }
+
+  .tag-gray.error-properties {
+    font-size: 100px;
+  }
 }

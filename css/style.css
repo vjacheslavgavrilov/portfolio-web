@@ -16,6 +16,20 @@
   gap: 50px;
 }
 
+.error-bottom-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.section-distance {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* General properties of bento and it's content */
 .bento-grid {
   display: grid;
@@ -172,6 +186,11 @@
   color: rgb(196, 196, 196);
 }
 
+.tag-gray.error-properties {
+  font-size: 150px;
+  color: rgba(38, 38, 38, 0.7);
+}
+
 .tag-oragne {
   line-height: 1.5;
   font-family: "Roboto Mono", monospace;
@@ -291,6 +310,7 @@
   border-radius: inherit;
 }
 
+/* Properties for the copy text button (noscript) */
 .copy-text {
   display: none;
   cursor: pointer;
@@ -305,4 +325,9 @@
 
 .icon-view-text-no-js {
   display: none;
+}
+
+/* I need only one underline in my code :D */
+.link-underline {
+  text-decoration: underline;
 }

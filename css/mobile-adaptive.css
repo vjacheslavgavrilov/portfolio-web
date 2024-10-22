@@ -91,4 +91,22 @@
   .key-results-div.secondary, .text-line-gap.secondary {
     gap: 10px;
   }
+
+  .error-bottom-section {
+    flex-direction: column;
+    justify-content: inherit;
+    gap: 100px;
+  }
+
+  .tag-gray.error-properties {
+    font-size: 75px;
+  }
+
+  #sorting-order-tag {
+    order: 2;
+  }
+
+  #sorting-order-tag-error {
+    order: 1;
+  }
 }
