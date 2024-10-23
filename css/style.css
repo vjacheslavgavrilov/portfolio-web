@@ -37,6 +37,10 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.bento-grid.one-column {
+  grid-template-columns: 1fr;
+}
+
 .bento-grid.content {
   gap: 100px;
 }
@@ -106,7 +110,7 @@
 .bento-info{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .bento-case-info, .bento-key-results {

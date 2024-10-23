@@ -22,7 +22,7 @@ function copyText() {
     return;
   }
 
-  var text = document.querySelector('.primary-button').value;
+  var text = document.querySelector('#copyTextButton').value;
   navigator.clipboard.writeText(text).then(function() {
       showSuccessToast('скопировано');
   }).catch(function(error) {
