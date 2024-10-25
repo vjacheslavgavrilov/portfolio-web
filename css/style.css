@@ -25,7 +25,8 @@
 
 .section-distance {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 50px);
+  overflow: auto;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -110,6 +111,10 @@
 .bento-info{
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.bento-info.secondary {
   gap: 20px;
 }
 
