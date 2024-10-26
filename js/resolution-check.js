@@ -1,4 +1,4 @@
-let isSmallScreen = window.innerWidth <= 374;
+let isSmallScreen = localStorage.getItem('isSmallScreen') === 'true' || window.innerWidth <= 374;
 const contentContainer = document.querySelector('.content-container');
 const smallResolution = document.querySelector('.small-resolution');
 let resizeTimer;
@@ -22,8 +22,12 @@ function toggleElements() {
             smallResolution.style.display = 'none';
         }
         isSmallScreen = shouldBeSmallScreen;
+        localStorage.setItem('isSmallScreen', shouldBeSmallScreen);
     }
 }
 
 toggleElements();
-window.addEventListener('resize', debounce(toggleElements, 100));
+
+if (!('ontouchstart' in window)) {
+    window.addEventListener('resize', debounce(toggleElements, 100));
+}

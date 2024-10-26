@@ -127,6 +127,7 @@
 
 .bento-key-results {
   gap: 25px;
+  height: inherit;
   justify-content: flex-start;
 }
 
