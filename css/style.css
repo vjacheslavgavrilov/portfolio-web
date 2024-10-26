@@ -76,10 +76,6 @@
   transition: all 0.25s ease;
 }
 
-.bento-div.primary.clickable:hover, .bento-div.case.clickable:hover {
-  transform: translateY(0px) scale(1.03);
-}
-
 .bento-div.primary.clickable:active, .bento-div.case.clickable:active {
   transform: translateY(0px) scale(0.97);
 }
@@ -166,10 +162,6 @@
   transition: all 0.25s ease;
 }
 
-.primary-button:hover, .superellipse-icon-button:hover {
-  background-color: rgba(38, 38, 38, 1);
-}
-
 .primary-button:active, .superellipse-icon-button:active {
   transform: translateY(0px) scale(0.97);
   background-color: rgba(38, 38, 38, 0.7);
@@ -227,11 +219,6 @@
   opacity: 0;
   transform: scale(0.2) translateZ(0px);
   transition: all 0.25s ease;
-}
-
-.bento-div.primary.clickable:hover .icon-view-div.external-link, .bento-div.case.clickable:hover .icon-view-div.external-link {
-  opacity: 1;
-  transform: none;
 }
 
 .icon-view {
@@ -339,4 +326,19 @@
 /* I need only one underline in my code :D */
 .link-underline {
   text-decoration: underline;
+}
+
+@media (hover: hover) {
+  .bento-div.primary.clickable:hover .icon-view-div.external-link, .bento-div.case.clickable:hover .icon-view-div.external-link {
+    opacity: 1;
+    transform: none;
+  }
+
+  .primary-button:hover, .superellipse-icon-button:hover {
+    background-color: rgba(38, 38, 38, 1);
+  }
+
+  .bento-div.primary.clickable:hover, .bento-div.case.clickable:hover {
+    transform: translateY(0px) scale(1.03);
+  }
 }
