@@ -26,7 +26,6 @@
 .section-distance {
   display: flex;
   height: calc(100vh - 50px);
-  overflow: auto;
   flex-direction: column;
   justify-content: space-between;
 }
