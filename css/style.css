@@ -76,10 +76,6 @@
   transition: all 0.25s ease;
 }
 
-.bento-div.primary.clickable:active, .bento-div.case.clickable:active {
-  transform: translateY(0px) scale(0.97);
-}
-
 .bento-div.secondary, .bento-div.mobile-bg {
   padding: 25px;
   display: flex;
@@ -162,13 +158,33 @@
   transition: all 0.25s ease;
 }
 
+/* Div actions */
+@media (hover: hover) {
+  .bento-div.primary.clickable:hover .icon-view-div.external-link, 
+  .bento-div.case.clickable:hover .icon-view-div.external-link {
+    opacity: 1;
+    transform: none;
+  }
+
+  .bento-div.primary.clickable:hover, .bento-div.case.clickable:hover {
+    transform: translateY(0px) scale(1.03);
+  }
+}
+
+.bento-div.primary.clickable:active, .bento-div.case.clickable:active {
+  transform: translateY(0px) scale(0.97);
+}
+
+/* Button actions */
+@media (hover: hover) {
+  .primary-button:hover, .superellipse-icon-button:hover {
+    background-color: rgba(38, 38, 38, 1);
+  }
+}
+
 .primary-button:active, .superellipse-icon-button:active {
   transform: translateY(0px) scale(0.97);
   background-color: rgba(38, 38, 38, 0.7);
-}
-
-.button-div {
-  position: relative;
 }
 
 /* Tags and labels */
@@ -278,6 +294,10 @@
 }
 
 /* Toast properties and animation */
+.button-div {
+  position: relative;
+}
+
 .toast {
   display: none;
   position: absolute;
@@ -332,20 +352,4 @@
 /* I need only one underline in my code :D */
 .link-underline {
   text-decoration: underline;
-}
-
-/* Some hover rules */
-@media (hover: hover) {
-  .bento-div.primary.clickable:hover .icon-view-div.external-link, .bento-div.case.clickable:hover .icon-view-div.external-link {
-    opacity: 1;
-    transform: none;
-  }
-
-  .primary-button:hover, .superellipse-icon-button:hover {
-    background-color: rgba(38, 38, 38, 1);
-  }
-
-  .bento-div.primary.clickable:hover, .bento-div.case.clickable:hover {
-    transform: translateY(0px) scale(1.03);
-  }
 }

@@ -347,6 +347,7 @@ button {
   all: unset;
   line-height: 0;
   cursor: pointer;
+  user-select: none;
 }
 
 /* ↓↓ General CSS properties for my portfolio website ↓↓ */
