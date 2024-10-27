@@ -198,11 +198,17 @@
   color: rgb(246, 97, 65);
 }
 
-/* Sticker fix */
-.my-face {
-  display: block;
+/* Image styles */
+
+.image-container {
+  max-width: 285px;
   margin: 60px auto;
 }
+
+.my-face {
+  display: block;
+}
+
 
 /* Icon view styles */
 .icon-view-div {
@@ -328,6 +334,7 @@
   text-decoration: underline;
 }
 
+/* Some hover rules */
 @media (hover: hover) {
   .bento-div.primary.clickable:hover .icon-view-div.external-link, .bento-div.case.clickable:hover .icon-view-div.external-link {
     opacity: 1;

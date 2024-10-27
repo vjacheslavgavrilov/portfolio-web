@@ -32,6 +32,10 @@
     grid-template-columns: inherit;
   }
 
+  .bento-div {
+    background-size: 90%;
+  }
+
   .bento-div.primary, .bento-case-info, .bento-key-results {
     padding: 25px;
   }

@@ -28,6 +28,10 @@
     gap: 40px;
   }
 
+  .bento-div {
+    background-size: 90%;
+  }
+
   .bento-div.primary, .bento-case-info, .bento-key-results {
     padding: 30px;
     min-height: initial;
