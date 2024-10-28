@@ -34,6 +34,7 @@
 
   .bento-div {
     background-size: 90%;
+    border-radius: 8px;
   }
 
   .bento-div.primary, .bento-case-info, .bento-key-results {
@@ -64,6 +65,10 @@
 
   .my-photo {
     width: 100%;
+  }
+
+  .my-photo, .my-case {
+    border-radius: 8px; 
   }
 
   #sorting-order-image {

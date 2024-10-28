@@ -215,7 +215,6 @@
 }
 
 /* Image styles */
-
 .image-container {
   max-width: 285px;
   margin: 60px auto;
@@ -225,6 +224,21 @@
   display: block;
 }
 
+.my-photo, .my-case {
+  border-radius: 16px;
+  outline: 1px solid rgb(31, 31, 31);
+  image-rendering: auto;
+}
+
+.case-image {
+  height: auto;
+  min-height: 200px;
+  object-fit: cover;
+  object-position: center center;
+  image-rendering: auto;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
 
 /* Icon view styles */
 .icon-view-div {
@@ -321,15 +335,6 @@
 @keyframes fadeout {
   from { opacity: 1; }
   to   { opacity: 0; }
-}
-
-/* Case images properties */
-.case-image {
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  image-rendering: auto;
-  border-radius: inherit;
 }
 
 /* Properties for the copy text button (noscript) */

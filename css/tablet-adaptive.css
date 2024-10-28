@@ -30,6 +30,7 @@
 
   .bento-div {
     background-size: 90%;
+    border-radius: 12px;
   }
 
   .bento-div.primary, .bento-case-info, .bento-key-results {
@@ -47,6 +48,10 @@
 
   .bento-grid.work.work-gap {
     margin-top: 60px;
+  }
+
+  .my-photo, .my-case {
+    border-radius: 12px; 
   }
 
   .icon-view-div.external-link {
