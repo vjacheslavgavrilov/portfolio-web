@@ -54,6 +54,11 @@
     border-radius: 12px; 
   }
 
+  .superellipse-icon-button.back-to-top {
+    bottom: 40px;
+    right: 40px;
+  }
+
   .icon-view-div.external-link {
     right: 30px;
     top: 30px;

@@ -158,6 +158,18 @@
   transition: all 0.25s ease;
 }
 
+.superellipse-icon-button.back-to-top {
+  opacity: 0;
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  transition: opacity 0.25s ease;
+}
+
+.superellipse-icon-button.back-to-top.show {
+  opacity: 1;
+}
+
 /* Div actions */
 @media (hover: hover) {
   .bento-div.primary.clickable:hover .icon-view-div.external-link, 

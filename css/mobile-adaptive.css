@@ -79,6 +79,11 @@
     order: 2;
   }
 
+  .superellipse-icon-button.back-to-top {
+    bottom: 30px;
+    right: 30px;
+  }
+
   .icon-view-text {
     max-width: inherit;
   }
