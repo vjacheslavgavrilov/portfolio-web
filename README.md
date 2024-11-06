@@ -14,5 +14,3 @@
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
-3. Enjoy and remember about copyright.
