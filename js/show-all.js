@@ -14,3 +14,8 @@ function showAll() {
     secondaryBentoDiv.style.display = 'none';
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const showAllButton = document.getElementById("showAll");
+  showAllButton.addEventListener("click", showAll);
+});

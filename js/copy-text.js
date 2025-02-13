@@ -22,7 +22,7 @@ function copyText() {
     return;
   }
 
-  var text = document.querySelector('#copyTextButton').value;
+  var text = document.querySelector('#copyText').value;
   navigator.clipboard.writeText(text).then(function() {
       showSuccessToast('скопировано');
   }).catch(function(error) {
@@ -30,3 +30,8 @@ function copyText() {
       showErrorToast('не получилось скопировать');
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const copyTextButton = document.getElementById("copyText");
+  copyTextButton.addEventListener("click", copyText);
+});
