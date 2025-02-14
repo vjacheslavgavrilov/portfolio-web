@@ -1,21 +1,35 @@
-function showAll() {
-  document.querySelectorAll('.bento-div.case').forEach(div => {
-    if (div.classList.contains('show-all-hidden')) {
-      div.classList.remove('show-all-hidden');
-      div.style.opacity = '0'; // setting the initial transparency
-      setTimeout(() => {
-        div.style.opacity = '1'; // changing the transparency to 1 after the delay
-      }, 100); // delay in ms
+class BentoManager {
+  constructor(showAllButtonSelector, bentoDivSelector, secondaryBentoDivSelector) {
+    this.showAllButton = document.getElementById(showAllButtonSelector);
+    this.bentoDivs = document.querySelectorAll(bentoDivSelector);
+    this.secondaryBentoDiv = document.querySelector(secondaryBentoDivSelector);
+
+    this.initEventListeners();
+  }
+
+  initEventListeners() {
+    if (this.showAllButton) {
+      this.showAllButton.addEventListener("click", () => this.showAll());
     }
-  });
-  
-  let secondaryBentoDiv = document.querySelector('#secondaryBentoDiv');
-  if (secondaryBentoDiv) {
-    secondaryBentoDiv.style.display = 'none';
+  }
+
+  showAll() {
+    this.bentoDivs.forEach(div => {
+      if (div.classList.contains('show-all-hidden')) {
+        div.classList.remove('show-all-hidden');
+        div.style.opacity = '0';
+        setTimeout(() => {
+          div.style.opacity = '1';
+        }, 100);
+      }
+    });
+
+    if (this.secondaryBentoDiv) {
+      this.secondaryBentoDiv.style.display = 'none';
+    }
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const showAllButton = document.getElementById("showAll");
-  showAllButton.addEventListener("click", showAll);
+  const bentoManager = new BentoManager("showAll", ".bento-div.case", "#secondaryBentoDiv");
 });

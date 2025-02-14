@@ -1,19 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => {
-  let scrollButton = document.querySelector("#back-to-top");
-  let htmlElement = document.documentElement;
-
-  window.addEventListener('scroll', () => {
-      if (window.scrollY > 20 || htmlElement.scrollTop > 20) {
-          scrollButton.classList.add("show");
+class ScrollToTopButton {
+    constructor(buttonId) {
+      this.scrollButton = document.querySelector(buttonId);
+      this.htmlElement = document.documentElement;
+      this.init();
+    }
+  
+    init() {
+      window.addEventListener('scroll', () => this.toggleButtonVisibility());
+      this.scrollButton.addEventListener('click', () => this.scrollToTop());
+    }
+  
+    toggleButtonVisibility() {
+      if (window.scrollY > 20 || this.htmlElement.scrollTop > 20) {
+        this.scrollButton.classList.add('show');
       } else {
-          scrollButton.classList.remove("show");
+        this.scrollButton.classList.remove('show');
       }
-  });
-
-  scrollButton.addEventListener("click", () => {
+    }
+  
+    scrollToTop() {
       window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
+        top: 0,
+        behavior: 'smooth'
       });
-  });
-});
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    new ScrollToTopButton('#back-to-top');
+  });  

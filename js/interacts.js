@@ -1,106 +1,62 @@
-const divTouch = document.querySelectorAll('.bento-div.primary.clickable, .bento-div.case.clickable');
+class InteractiveElement {
+  constructor(selector, touchStartStyle, touchEndStyle, mouseDownStyle, mouseUpStyle, hoverStyle) {
+    this.elements = document.querySelectorAll(selector);
+    this.touchStartStyle = touchStartStyle;
+    this.touchEndStyle = touchEndStyle;
+    this.mouseDownStyle = mouseDownStyle;
+    this.mouseUpStyle = mouseUpStyle;
+    this.hoverStyle = hoverStyle;
+    this.init();
+  }
 
-divTouch.forEach((div) => {
-  div.addEventListener('touchstart', () => {
-    div.style.transform = 'translateY(0px) scale(0.97)';
-    div.classList.remove('hovered');
-  });
+  init() {
+    this.elements.forEach((element) => {
+      element.addEventListener('touchstart', () => this.applyStyle(element, this.touchStartStyle));
+      element.addEventListener('touchend', () => this.applyStyle(element, this.touchEndStyle));
+      element.addEventListener('mousedown', () => this.applyStyle(element, this.mouseDownStyle));
+      element.addEventListener('mouseup', () => this.applyStyle(element, this.mouseUpStyle));
+      element.addEventListener('mouseleave', () => this.applyStyle(element, this.mouseUpStyle));
+      element.addEventListener('mouseover', () => this.applyHoverStyle(element));
+      element.addEventListener('mouseout', () => this.removeHoverStyle(element));
+    });
+  }
 
-  div.addEventListener('touchend', () => {
-    div.style.transform = 'translateY(0px) scale(1.00)';
-    div.classList.remove('hovered');
-  });
-});
+  applyStyle(element, style) {
+    Object.assign(element.style, style);
+    element.classList.remove('hovered');
+  }
 
-const buttonTouch = document.querySelectorAll('.primary-button, .superellipse-icon-button');
-
-buttonTouch.forEach((button) => {
-  button.addEventListener('touchstart', () => {
-    button.style.backgroundColor = 'rgba(38, 38, 38, 1)';
-    button.classList.remove('hovered');
-  });
-
-  button.addEventListener('touchend', () => {
-    button.style.backgroundColor = 'rgba(38, 38, 38, 0.7)';
-    button.classList.remove('hovered');
-  });
-});
-
-const divMouse = document.querySelectorAll('.bento-div.primary.clickable, .bento-div.case.clickable');
-
-divMouse.forEach((div) => {
-  div.addEventListener('mousedown', () => {
-    div.style.transform = 'translateY(0px) scale(0.97)';
-    div.classList.remove('hovered');
-  });
-
-  div.addEventListener('mouseup', () => {
-    div.style.transform = 'translateY(0px) scale(1.00)';
-    div.classList.remove('hovered');
-  });
-  div.addEventListener('mouseleave', () => {
-    div.classList.remove('hovered');
-  });
-});
-
-const buttonMouse = document.querySelectorAll('.primary-button, .superellipse-icon-button');
-
-buttonMouse.forEach((button) => {
-  button.addEventListener('mousedown', () => {
-    button.style.backgroundColor = 'rgba(38, 38, 38, 1)';
-    button.style.transform = 'translateY(0px) scale(0.97)';
-    button.classList.remove('hovered');
-  });
-
-  button.addEventListener('mouseup', () => {
-    button.style.backgroundColor = 'rgba(38, 38, 38, 0.7)';
-    button.style.transform = 'translateY(0px) scale(1.00)';
-    button.classList.remove('hovered');
-  });
-  button.addEventListener('mouseleave', () => {
-    button.style.transform = 'translateY(0px) scale(1.00)';
-    button.classList.remove('hovered');
-  });
-});
-
-const divHover = document.querySelectorAll('.bento-div.primary.clickable, .bento-div.case.clickable');
-
-divHover.forEach((div) => {
-  div.addEventListener('mouseover', () => {
-    div.style.transform = 'translateY(0px) scale(1.03)';
-    if (!div.classList.contains('hovered')) {
-      div.classList.add('hovered');
+  applyHoverStyle(element) {
+    Object.assign(element.style, this.hoverStyle);
+    if (!element.classList.contains('hovered')) {
+      element.classList.add('hovered');
     }
-  });
+  }
 
-  div.addEventListener('mouseout', () => {
-    if (!div.classList.contains('clicked')) {
-      div.style.transform = 'translateY(0px) scale(1.00)';
+  removeHoverStyle(element) {
+    if (!element.classList.contains('clicked')) {
+      Object.assign(element.style, this.mouseUpStyle);
     }
-    div.classList.remove('hovered');
-  });
-});
+    element.classList.remove('hovered');
+  }
+}
 
-const buttonHover = document.querySelectorAll('.primary-button, .superellipse-icon-button');
+document.addEventListener('DOMContentLoaded', () => {
+  new InteractiveElement(
+    '.bento-div.primary.clickable, .bento-div.case.clickable',
+    { transform: 'translateY(0px) scale(0.97)' },
+    { transform: 'translateY(0px) scale(1.00)' },
+    { transform: 'translateY(0px) scale(0.97)' },
+    { transform: 'translateY(0px) scale(1.00)' },
+    { transform: 'translateY(0px) scale(1.03)' }
+  );
 
-buttonHover.forEach((button) => {
-  button.addEventListener('mouseover', () => {
-    button.style.backgroundColor = 'rgba(38, 38, 38, 1)';
-    if (!button.classList.contains('hovered')) {
-      button.classList.add('hovered');
-    }
-  });
-
-  button.addEventListener('mouseout', () => {
-    if (!button.classList.contains('clicked')) {
-      button.style.backgroundColor = 'rgba(38, 38, 38, 0.7)';
-    }
-    button.classList.remove('hovered');
-  });
-
-  button.addEventListener('mouseenter', () => {
-    if (!button.classList.contains('clicked')) {
-      button.style.transform = 'translateY(0px) scale(1.00)';
-    }
-  });
+  new InteractiveElement(
+    '.primary-button, .superellipse-icon-button',
+    { backgroundColor: 'rgba(38, 38, 38, 1)' },
+    { backgroundColor: 'rgba(38, 38, 38, 0.7)' },
+    { backgroundColor: 'rgba(38, 38, 38, 1)', transform: 'translateY(0px) scale(0.97)' },
+    { backgroundColor: 'rgba(38, 38, 38, 0.7)', transform: 'translateY(0px) scale(1.00)' },
+    { backgroundColor: 'rgba(38, 38, 38, 1)' }
+  );
 });
