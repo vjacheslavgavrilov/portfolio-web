@@ -14,7 +14,7 @@ function replaceSymbols() {
     const symbols = ['@', '#', '$', '*', '%'];
     const shuffledSymbols = shuffle([...symbols]);
 
-    const replacedText = text.replace(/(@|#|\$|\*|%)/g, function(match) {
+    const replacedText = text.replace(/(@|#|\$|\*|%)/g, (match) => {
       if (symbols.includes(match)) {
         const randomSymbol = shuffledSymbols.shift();
         return randomSymbol;

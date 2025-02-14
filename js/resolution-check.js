@@ -4,7 +4,7 @@ const smallResolution = document.querySelector('.small-resolution');
 let resizeTimer;
 
 function debounce(func, wait) {
-    return function() {
+    return () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(func, wait);
     };

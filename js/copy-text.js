@@ -2,7 +2,7 @@ function showSuccessToast(message) {
   const toast = document.querySelector('.toast');
   toast.innerText = message;
   toast.style.display = 'block';
-  setTimeout(function() {
+  setTimeout(() => {
       toast.style.display = 'none';
   }, 1500);
 }
@@ -11,7 +11,7 @@ function showErrorToast(message) {
   const toast = document.querySelector('.toast');
   toast.innerText = message;
   toast.style.display = 'block';
-  setTimeout(function() {
+  setTimeout(() => {
       toast.style.display = 'none';
   }, 1500);
 }
@@ -23,9 +23,9 @@ function copyText() {
   }
 
   const text = document.querySelector('#copyText').value;
-  navigator.clipboard.writeText(text).then(function() {
+  navigator.clipboard.writeText(text).then(() => {
       showSuccessToast('скопировано');
-  }).catch(function(error) {
+  }).catch((error) => {
       console.error('Ошибка при копировании текста:', error);
       showErrorToast('не получилось скопировать');
   });

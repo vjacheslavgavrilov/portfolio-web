@@ -1,12 +1,12 @@
 const divTouch = document.querySelectorAll('.bento-div.primary.clickable, .bento-div.case.clickable');
 
-divTouch.forEach(function(div) {
-  div.addEventListener('touchstart', function() {
+divTouch.forEach((div) => {
+  div.addEventListener('touchstart', () => {
     div.style.transform = 'translateY(0px) scale(0.97)';
     div.classList.remove('hovered');
   });
 
-  div.addEventListener('touchend', function() {
+  div.addEventListener('touchend', () => {
     div.style.transform = 'translateY(0px) scale(1.00)';
     div.classList.remove('hovered');
   });
@@ -14,13 +14,13 @@ divTouch.forEach(function(div) {
 
 const buttonTouch = document.querySelectorAll('.primary-button, .superellipse-icon-button');
 
-buttonTouch.forEach(function(button) {
-  button.addEventListener('touchstart', function() {
+buttonTouch.forEach((button) => {
+  button.addEventListener('touchstart', () => {
     button.style.backgroundColor = 'rgba(38, 38, 38, 1)';
     button.classList.remove('hovered');
   });
 
-  button.addEventListener('touchend', function() {
+  button.addEventListener('touchend', () => {
     button.style.backgroundColor = 'rgba(38, 38, 38, 0.7)';
     button.classList.remove('hovered');
   });
@@ -28,36 +28,36 @@ buttonTouch.forEach(function(button) {
 
 const divMouse = document.querySelectorAll('.bento-div.primary.clickable, .bento-div.case.clickable');
 
-divMouse.forEach(function(div) {
-  div.addEventListener('mousedown', function() {
+divMouse.forEach((div) => {
+  div.addEventListener('mousedown', () => {
     div.style.transform = 'translateY(0px) scale(0.97)';
     div.classList.remove('hovered');
   });
 
-  div.addEventListener('mouseup', function() {
+  div.addEventListener('mouseup', () => {
     div.style.transform = 'translateY(0px) scale(1.00)';
     div.classList.remove('hovered');
   });
-  div.addEventListener('mouseleave', function() {
+  div.addEventListener('mouseleave', () => {
     div.classList.remove('hovered');
   });
 });
 
 const buttonMouse = document.querySelectorAll('.primary-button, .superellipse-icon-button');
 
-buttonMouse.forEach(function(button) {
-  button.addEventListener('mousedown', function() {
+buttonMouse.forEach((button) => {
+  button.addEventListener('mousedown', () => {
     button.style.backgroundColor = 'rgba(38, 38, 38, 1)';
     button.style.transform = 'translateY(0px) scale(0.97)';
     button.classList.remove('hovered');
   });
 
-  button.addEventListener('mouseup', function() {
+  button.addEventListener('mouseup', () => {
     button.style.backgroundColor = 'rgba(38, 38, 38, 0.7)';
     button.style.transform = 'translateY(0px) scale(1.00)';
     button.classList.remove('hovered');
   });
-  button.addEventListener('mouseleave', function() {
+  button.addEventListener('mouseleave', () => {
     button.style.transform = 'translateY(0px) scale(1.00)';
     button.classList.remove('hovered');
   });
@@ -65,15 +65,15 @@ buttonMouse.forEach(function(button) {
 
 const divHover = document.querySelectorAll('.bento-div.primary.clickable, .bento-div.case.clickable');
 
-divHover.forEach(function(div) {
-  div.addEventListener('mouseover', function() {
+divHover.forEach((div) => {
+  div.addEventListener('mouseover', () => {
     div.style.transform = 'translateY(0px) scale(1.03)';
     if (!div.classList.contains('hovered')) {
       div.classList.add('hovered');
     }
   });
 
-  div.addEventListener('mouseout', function() {
+  div.addEventListener('mouseout', () => {
     if (!div.classList.contains('clicked')) {
       div.style.transform = 'translateY(0px) scale(1.00)';
     }
@@ -83,22 +83,22 @@ divHover.forEach(function(div) {
 
 const buttonHover = document.querySelectorAll('.primary-button, .superellipse-icon-button');
 
-buttonHover.forEach(function(button) {
-  button.addEventListener('mouseover', function() {
+buttonHover.forEach((button) => {
+  button.addEventListener('mouseover', () => {
     button.style.backgroundColor = 'rgba(38, 38, 38, 1)';
     if (!button.classList.contains('hovered')) {
       button.classList.add('hovered');
     }
   });
 
-  button.addEventListener('mouseout', function() {
+  button.addEventListener('mouseout', () => {
     if (!button.classList.contains('clicked')) {
       button.style.backgroundColor = 'rgba(38, 38, 38, 0.7)';
     }
     button.classList.remove('hovered');
   });
 
-  button.addEventListener('mouseenter', function() {
+  button.addEventListener('mouseenter', () => {
     if (!button.classList.contains('clicked')) {
       button.style.transform = 'translateY(0px) scale(1.00)';
     }
