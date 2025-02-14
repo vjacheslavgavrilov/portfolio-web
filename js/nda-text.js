@@ -7,16 +7,16 @@ function shuffle(array) {
 }
 
 function replaceSymbols() {
-  var elements = document.querySelectorAll(".nda-text");
+  const elements = document.querySelectorAll(".nda-text");
 
   elements.forEach(element => {
-    var text = element.innerHTML;
-    var symbols = ['@', '#', '$', '*', '%'];
-    var shuffledSymbols = shuffle([...symbols]);
+    let text = element.innerHTML;
+    const symbols = ['@', '#', '$', '*', '%'];
+    const shuffledSymbols = shuffle([...symbols]);
 
-    var replacedText = text.replace(/(@|#|\$|\*|%)/g, function(match) {
+    const replacedText = text.replace(/(@|#|\$|\*|%)/g, function(match) {
       if (symbols.includes(match)) {
-        var randomSymbol = shuffledSymbols.shift();
+        const randomSymbol = shuffledSymbols.shift();
         return randomSymbol;
       }
       return match;

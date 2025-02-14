@@ -1,5 +1,5 @@
 function showSuccessToast(message) {
-  var toast = document.querySelector('.toast');
+  const toast = document.querySelector('.toast');
   toast.innerText = message;
   toast.style.display = 'block';
   setTimeout(function() {
@@ -8,7 +8,7 @@ function showSuccessToast(message) {
 }
 
 function showErrorToast(message) {
-  var toast = document.querySelector('.toast');
+  const toast = document.querySelector('.toast');
   toast.innerText = message;
   toast.style.display = 'block';
   setTimeout(function() {
@@ -22,7 +22,7 @@ function copyText() {
     return;
   }
 
-  var text = document.querySelector('#copyText').value;
+  const text = document.querySelector('#copyText').value;
   navigator.clipboard.writeText(text).then(function() {
       showSuccessToast('скопировано');
   }).catch(function(error) {
